@@ -101,4 +101,46 @@ VALUES (NOW(), 'Ana.clara', '2010-02-20', 'Solteiro', 'SP', 'Fundamental Complet
 (NOW(), 'brenda.w', '2010-02-23', 'Solteiro', 'SP', 'Fundamental Completo', 'bwolf@email.com', '101', 'Brenda'),
 (NOW(), 'eduarda', '2009-10-13', 'Solteiro', 'SP', 'Fundamental Completo', 'edu@email.com', '112', 'eduarda');
 
-SELECT * FROM USUARIO;
+SELECT * FROM USUARIOS;
+
+INSERT INTO ENQUETE ((ENQ_DATA_INICIAL,ENQ_NOME)
+VARCHAR (NOW(), 'FORMS BANCO DE DADOS'),
+		(NOW(), 'FORMS LINGUASGEM DE MARCAÇÃO'),
+        (NOW(), 'FORMS PROGRAMAÇÃO BACK-END'),
+        (NOW(), ' FORMS PROJETO'),
+        (NOW(), 'FORMS FINAL');
+
+SELECT * FROM USUSARIO;
+
+NSERT INTO PERGUNTAS ( PER_DESCRICAO,
+FK_ENQ_CODIGO
+)
+VALUES ('OQUE É SELECT?' , 1 ),
+('OQUE É SQL?' , 1 ),
+        ('OQUE É UPDATE?' , 1 ),
+        ('OQUE É FORM?' , 2 ),
+        ('OQUE É TABLE?' , 2 );
+       
+SELECT * FROM PERGUNTAS;
+
+INSERT INTO RESPOSTAS (RES_DESCRICAO,
+RES_CERTA,
+                        FK_PER_CODIGO)
+VALUES ('A) BANCO DE DADOS' , 'C' , '1'),
+('B) PHP' , 'E' , '1'),
+('C) HTML' , 'E' , '1'),
+('A) SELECT RETORNA DADOS' , 'C' , '2'),
+            ('B) SELECT ALTERA DADOS' , 'E' , '2');
+
+SELECT * FROM RESPOSTAS;
+
+INSERT INTO USUARIO_RESPONDE_ENQUETE (URE_DATA,
+FK_USU_CODIGO,
+                                        FK_ENQ_CODIGO)
+VALUES (NOW(), 2, 1),
+(NOW(), 2, 2),
+        (NOW(), 2, 3),
+        (NOW(), 2, 4),
+        (NOW(), 2, 5);
+       
+SELECT * FROM USUARIO_RESPONDE_ENQUETE;
